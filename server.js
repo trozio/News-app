@@ -15,7 +15,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(express.static("public"));
 
-let databaseUrl = "gtnews";
+let databaseUrl = "heroku_6v3v9gk4";
 let collections = ["articles"];
 
 let db = mongojs(databaseUrl, collections);
