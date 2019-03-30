@@ -18,7 +18,7 @@ app.use(express.static("public"));
 let databaseUrl = "mongodb://<Dani>:<password1>@ds211625.mlab.com:11625/heroku_6v3v9gk4";
 let collections = ["articles"];
 
-let db = mongoose.connection;
+let db = mongojs(databaseUrl, collections);
 
 db.on("error", function(error) {
 	console.log("Database Error:", error);
