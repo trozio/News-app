@@ -23,15 +23,15 @@
 M.AutoInit();
 
 $("#refresh").on("click", (e) => {
-	// refresh
-})
-$(document).ready(function(){
 	$.ajax({
 		url: "/api/news",
 		method: "GET"
 	}).then((results) => {
 		console.log("Data inserted");
 	});
+})
+$(document).ready(function(){
+
 
 	$.ajax({
 		url: "/news",
