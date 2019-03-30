@@ -6,7 +6,7 @@ let path = require("path");
 let mongojs = require("mongojs");
 let app = express();
 let PORT = process.env.PORT || 3000;
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://<heroku_6v3v9gk4>:<dbpassword>@ds211625.mlab.com:11625/heroku_6v3v9gk4";
 mongoose.connect(MONGODB_URI);
 
 app.use(express.urlencoded({
@@ -46,13 +46,18 @@ app.get("/api/news", (req, res) => {
 				let result = {};
 				result.title = $(element).children().text();
 				result.link = $(element).find("a").attr("href");
-
+				result.comment = "";
 				db.articles.save(result);
 			});
 
 
 		});
 
+});
+
+app.post("/comments", (req, res) => {
+	let id = req.body.id;
+res.json(id);	// db.articles.updateOne({_id: id})
 });
 
 app.listen(PORT, function() {
