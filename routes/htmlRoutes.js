@@ -17,7 +17,7 @@ db.on("error", function(error) {
 });
 
 app.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname, "../views/index.html"));
+	res.sendFile(path.join(__dirname, "../public/views/index.html"));
 });
 
 app.get("/news", (req, res) => {
