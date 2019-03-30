@@ -57,4 +57,4 @@ app.get("/api/news", (req, res) => {
 
 app.listen(PORT, function() {
 	console.log("App listening on port: " + PORT);
-})
+});
