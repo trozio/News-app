@@ -5,6 +5,8 @@ let axios = require("axios");
 let path = require("path");
 let mongojs = require("mongojs");
 let app = express();
+
+module.exports = function(app){
 let databaseUrl = "mongodb://Dani:password1@ds211625.mlab.com:11625/heroku_6v3v9gk4";
 let collections = ["articles"];
 
@@ -49,3 +51,5 @@ app.post("/comments", (req, res) => {
 	let id = req.body.id;
 	db.articles.updateOne({"_id": id}, {"$set": {"comment": req.body.comment}})
 });
+
+};
