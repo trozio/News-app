@@ -25,7 +25,7 @@ M.AutoInit();
 $("#refresh").on("click", (e) => {
 	// refresh
 })
-
+$("document").ready(){
 	$.ajax({
 		url: "/api/news",
 		method: "GET"
@@ -56,5 +56,6 @@ $("#refresh").on("click", (e) => {
 			$("#comments").html(response);
 		});
 	});
+};
 </script>
 </html>
