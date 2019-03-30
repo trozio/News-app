@@ -41,7 +41,7 @@ $(document).ready(function(){
 		console.log(results);
 		for (let i = 0; i < 11; i++) {
 			let article = $("<div>");
-			article.html("<div class='row'><div class='col s12 m6'><div class='card large blue-grey darken-1'><div class='card-content white-text'><div id='id' class='hide'>" + results[i]._id + "</div><span class='card-title'>" + results[i].title + "</span></div><div class='card-action'><a href=" + results[i].link + ">Go there</a><div><h5>Comments</h5><div id='comments'></div></div></div><form class='col s12'><div class='row'><div class='input-field col s6'><input id='userComment' type='text' class='validate'><label for='first_name'>Comment</label><button id='commentB' class='btn waves-effect waves-light' type='submit' name='action'>Comment<i class='material-icons right'>send</i></button></div></div></div></div>");
+			article.html("<div class='row'><div class='col s12 m6'><div class='card medium blue-grey darken-1'><div class='card-content white-text'><div id='id' class='hide'>" + results[i]._id + "</div><span class='card-title'>" + results[i].title + "</span></div><div class='card-action'><a href=" + results[i].link + ">Go there</a><div><h5>Comments</h5><div id='comments'></div></div></div><form class='col s12'><div class='row'><div class='input-field col s6'><input id='userComment' type='text' class='validate'><label for='first_name'>Comment</label><button id='commentB' class='btn waves-effect waves-light' type='submit' name='action'>Comment<i class='material-icons right'>send</i></button></div></div></div></div>");
 			$("#articles").append(article);
 		}
 	});
