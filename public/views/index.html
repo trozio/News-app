@@ -30,7 +30,20 @@ $("#refresh").on("click", (e) => {
 	}).then((results) => {
 		console.log("Data inserted");
 	});
-})
+});
+
+$("#commentB").on("click", function(e){
+	e.preventDefault();
+	$.ajax({
+		url: "/comments",
+		method: "POST",
+		data: {comment: $("#userComment").val(),
+		id: $("#id").val()}
+	}).then((response) => {
+		// $("#comments").html(response);
+		console.log("hello");
+	});
+});
 $(document).ready(function(){
 
 
@@ -46,18 +59,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$("#commentB").on("click", function(e){
-		e.preventDefault();
-		$.ajax({
-			url: "/comments",
-			method: "POST",
-			data: {comment: $("#userComment").val(),
-			id: $("#id").val()}
-		}).then((response) => {
-			// $("#comments").html(response);
-			console.log("hello");
-		});
-	});
+
 });
 </script>
 </html>
