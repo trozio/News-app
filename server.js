@@ -41,7 +41,6 @@ app.get("/api/news", (req, res) => {
 	axios.get("https://www.nytimes.com")
 		.then(function(response) {
 			let $ = cheerio.load(response.data);
-			console.log(response);
 			db.articles.remove({});
 			$("article").each(function(i, element) {
 				let result = {};
