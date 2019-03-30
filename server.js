@@ -6,7 +6,7 @@ let path = require("path");
 let mongojs = require("mongojs");
 let app = express();
 let PORT = process.env.PORT || 3000;
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://<heroku_6v3v9gk4>:<dbpassword>@ds211625.mlab.com:11625/heroku_6v3v9gk4";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://<Dani>:<password1>@ds211625.mlab.com:11625/heroku_6v3v9gk4";
 mongoose.connect(MONGODB_URI);
 
 app.use(express.urlencoded({
