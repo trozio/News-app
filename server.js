@@ -16,7 +16,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(express.static("public"));
 
-require("./routes/htmlRoutes.js");
+require("./routes/htmlRoutes.js")(app);
 
 
 app.listen(PORT, function() {
