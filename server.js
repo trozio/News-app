@@ -58,7 +58,7 @@ app.get("/api/news", (req, res) => {
 
 app.post("/comments", (req, res) => {
 	let id = req.body.id;
-res.json(id);	// db.articles.updateOne({_id: id})
+	db.articles.updateOne({_id: id})
 });
 
 app.listen(PORT, function() {
