@@ -54,7 +54,8 @@ $(document).ready(function(){
 			data: {comment: $("#userComment").val(),
 			id: $("#id").val()}
 		}).then((response) => {
-			$("#comments").html(response);
+			// $("#comments").html(response);
+			console.log("hello");
 		});
 	});
 });
