@@ -32,7 +32,7 @@ $("#refresh").on("click", (e) => {
 	});
 });
 
-$("#commentB").on("click", function(e){
+$("#commentB").on("click", e => {
 	e.preventDefault();
 	$.ajax({
 		url: "/comments",
